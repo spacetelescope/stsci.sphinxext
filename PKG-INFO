@@ -1,0 +1,15 @@
+Metadata-Version: 1.0
+Name: stsci_sphinxext
+Version: 0.1
+Summary: A set of tools and templates to customize Sphinx for use in STScI projects
+Home-page: UNKNOWN
+Author: Michael Droettboom
+Author-email: mdroe@stsci.edu
+License: BSD
+Description: In short, you use this package by adding 'from stsci_docs.conf
+        import *' to the top of your conf.py in your Sphinx documentation
+        source tree.  In long, see the README file.
+Platform: Linux
+Platform: Solaris
+Platform: Mac OS X
+Platform: Win

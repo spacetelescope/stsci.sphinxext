@@ -28,7 +28,7 @@ __dir__ = os.path.abspath(os.path.dirname(__file__))
 # In order to get Sphinx to import extensions in this directory
 sys.path.insert(0, __dir__)
 
-primary_domain = 'python'
+primary_domain = 'py'
 
 # A list of standard extensions
 extensions = [

@@ -12,7 +12,7 @@
 % Pass all given class options to the parent class.
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{howto}}
 \ProcessOptions\relax
-\LoadClass{howto}
+\LoadClass{sphinxhowto}
 
 \newcommand{\TSR}{}
 

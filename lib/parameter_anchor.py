@@ -7,12 +7,15 @@ from docutils import nodes
 def setup(app):
     app.connect("doctree-resolved", add_parameter_anchors)
 
-class Visitor(nodes.GenericNodeVisitor):
+class Visitor(nodes.NodeVisitor):
     def __init__(self, doctree):
-        nodes.GenericNodeVisitor.__init__(self, doctree)
+        nodes.NodeVisitor.__init__(self, doctree)
         self._function = ''
 
     def default_visit(self, node):
+        pass
+
+    def unknown_visit(self, node):
         pass
 
     def visit_desc_signature(self, node):
@@ -27,11 +30,12 @@ class Visitor(nodes.GenericNodeVisitor):
             field_body = node[1]
             for subnode in field_body:
                 parnode = subnode[0]
-                if self._function:
-                    name = self._function + '-' + parnode.astext()
-                else:
-                    name = parnode.astext()
-                parnode['ids'].append(name)
+                if isinstance(parnode, nodes.strong):
+                    if self._function:
+                        name = self._function + '-' + parnode.astext()
+                    else:
+                        name = parnode.astext()
+                    parnode['ids'].append(name)
 
 def add_parameter_anchors(app, doctree, fromdocname):
     doctree.walk(Visitor(doctree))

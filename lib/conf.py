@@ -35,7 +35,7 @@ extensions = [
     'narrow_field_lists',      # Create field lists that don't waste
                                # so much horizontal space
     'abstract',                # Support an abstract directive
-#    'parameter_anchor',        # Add HTML anchors to parameter names
+    'parameter_anchor',        # Add HTML anchors to parameter names
     'sphinx.ext.autodoc',      # Extract documentation from docstrings
     'sphinx.ext.intersphinx',  # Link to other Sphinx documentation trees
     'sphinx.ext.pngmath',      # Render math as images

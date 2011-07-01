@@ -1,4 +1,0 @@
-include defsetup.py MANIFEST.in README stsci_distutils_hack.py
-recursive-include lib/stsci_sphinx_theme theme.conf
-recursive-include lib/stsci_sphinx_theme/static *.png *.css_t
-recursive-include lib/latex sphinxstr.cls stsci_logo.pdf tsr.cls

@@ -6,7 +6,7 @@ import distutils.extension
 pkg = "stsci_sphinxext"
 
 setupargs = {
-    'version' :         '0.1',
+    'version' :         '1.0',
     'description' :
         'A set of tools and templates to customize Sphinx for use in STScI projects',
 

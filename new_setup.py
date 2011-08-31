@@ -28,7 +28,8 @@ except ImportError:
 
 setup(
     setup_requires=['d2to1', 'stsci.distutils==0.2'],
-    d2to1=True,
+    d2to1='new_setup.cfg',
+    namespace_packages=['stsci'], packages=['stsci'],
     use_2to3=True,
     zip_safe=False
 )

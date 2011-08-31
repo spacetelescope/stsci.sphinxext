@@ -3,7 +3,7 @@ import os
 import shutil
 
 import distutils.extension
-pkg = "stsci_sphinxext"
+pkg = ["stsci", "stsci.sphinxext"]
 
 setupargs = {
     'version' :         '1.0',
@@ -27,29 +27,18 @@ source tree.  In long, see the README file.''',
 
     'platforms' :       ["Linux", "Solaris", "Mac OS X", "Win"],
 
-    'package_dir':      { 'stsci_sphinxext' : 'lib/stsci_sphinxext'  },
+    'package_dir':      { '' : 'lib'  },
 
     # how to install your data files:
     #   [
     #       ( directory_name_files_go_to, [ file_name_in_source_tree, another_data_file, etc ] )
     #   ]
-    'data_files' :      [
-        (os.path.join(pkg, 'stsci_sphinx_theme'), [
-                'lib/stsci_sphinxext/stsci_sphinx_theme/theme.conf',
-                ]
-         ),
-        (os.path.join(pkg, 'stsci_sphinx_theme', 'static'), [
-                'lib/stsci_sphinxext/stsci_sphinx_theme/static/stsci_sphinx.css_t',
-                'lib/stsci_sphinxext/stsci_sphinx_theme/static/stsci_logo.png',
-                'lib/stsci_sphinxext/stsci_sphinx_theme/static/stsci_background.png'
-                ]
-         ),
-        (os.path.join(pkg, 'latex'), [
-                'lib/stsci_sphinxext/latex/stsci_logo.pdf',
-                'lib/stsci_sphinxext/latex/tsr.cls',
-                'lib/stsci_sphinxext/latex/sphinxtsr.cls'
-                ]
-         )
-        ],
+    'package_data' :      {
+        'stsci.sphinxext': [
+                'stsci_sphinx_theme/theme.conf',
+                'stsci_sphinx_theme/static/*',
+                'latex/*'
+        ]
+    }
 }
 

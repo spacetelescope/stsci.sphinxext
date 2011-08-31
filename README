@@ -1,4 +1,4 @@
-stsci_sphinxext
+stsci.sphinxext
 ===============
 
 .. author:: Michael Droettboom, 2011
@@ -30,10 +30,10 @@ sphinx_quickstart, as described in the `Sphinx introduction
 Import the stsci_sphinx customizations into your project's `conf.py`
 by inserting the following line at the top::
 
-  from stsci_sphinxext.conf import *
+  from stsci.sphinxext.conf import *
 
 The "extensions" line in your `conf.py` should also be modified so it
-doesn't override the extensions defined by stsci_sphinxext.  For
+doesn't override the extensions defined by stsci.sphinxext.  For
 example, change::
 
   extensions = ['sphinx.ext.autodoc']
@@ -43,5 +43,5 @@ to::
   extensions += ['sphinx.ext.autodoc']
 
 Also, comment out the 'html_theme' line, so your project will use the
-stsci_sphinxext one.
+stsci.sphinxext one.
 

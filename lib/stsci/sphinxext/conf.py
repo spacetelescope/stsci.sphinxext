@@ -4,7 +4,7 @@ configuration files to set reasonable defaults for STScI projects.
 
 It should be imported from the top of your `conf.py` as::
 
-  from stsci_sphinxext.conf import *
+  from stsci.sphinxext.conf import *
 
 The "extensions" line in your `conf.py` should also be modified so it
 doesn't override the extensions defined here.  For example, change::

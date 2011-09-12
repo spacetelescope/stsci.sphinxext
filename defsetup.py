@@ -27,7 +27,7 @@ source tree.  In long, see the README file.''',
 
     'platforms' :       ["Linux", "Solaris", "Mac OS X", "Win"],
 
-    'package_dir':      { 'stsci.sphinxext' : 'lib/stsci/sphinxext'  },
+    'package_dir':      { 'stsci' : 'lib/stsci', 'stsci.sphinxext' : 'lib/stsci/sphinxext'  },
 
     # how to install your data files:
     #   [

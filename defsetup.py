@@ -33,10 +33,8 @@ source tree.  In long, see the README file.''',
     #   [
     #       ( directory_name_files_go_to, [ file_name_in_source_tree, another_data_file, etc ] )
     #   ]
-    'data_files' :      [
-                ( 'stsci/sphinxext/stsci_sphinx_theme', [ 'lib/stsci/sphinxext/stsci_sphinx_theme/theme.conf' ] ),
-                ( 'stsci/sphinxext/stsci_sphinx_theme/static', [ 'lib/stsci/sphinxext/stsci_sphinx_theme/static/*' ] ),
-                ( 'stsci/sphinxext/latex', [ 'lib/stsci/sphinxext/latex/*' ] ),
-        ],
-}
+    'data_files' : [],
 
+    'package_data' :      {
+                'stsci.sphinxext': [ 'stsci_sphinx_theme/theme.conf', 'stsci_sphinx_theme/static/*', 'latex/*' ] }
+}

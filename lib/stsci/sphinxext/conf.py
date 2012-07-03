@@ -30,6 +30,20 @@ sys.path.insert(0, __dir__)
 
 primary_domain = 'py'
 
+try:
+    import numpydoc
+except ImportError:
+    print >> sys.stderr, ('numpydoc and Numpy are required to build this '
+                          'documentation')
+    sys.exit(1)
+
+try:
+    import matplotlib.sphinxext
+except ImportError:
+    print >> sys.stderr, ('matplotlib, and specifically matplotlib.sphinxext '
+                          'are required to build this documentation')
+    sys.exit(1)
+
 # A list of standard extensions
 extensions = [
     'narrow_field_lists',      # Create field lists that don't waste
@@ -75,6 +89,9 @@ html_theme_path = [__dir__]
 html_theme = 'stsci_sphinx_theme'
 html_logo = os.path.join(
     __dir__, 'stsci_sphinx_theme', 'static', 'stsci_logo.png')
+
+# This is required to remove the superfluous np module index added by numpydoc
+html_domain_indices = ['py-modindex']
 
 # ----------------------------------------------------------------------
 # LATEX OPTIONS

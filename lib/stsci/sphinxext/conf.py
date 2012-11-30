@@ -73,7 +73,7 @@ default_role = 'obj'
 intersphinx_mapping = {
     'http://docs.python.org/': None,
     'http://docs.scipy.org/doc/numpy': None,
-    'http://matplotlib.sourceforge.net': None,
+    'http://matplotlib.org/': None,
     }
 
 # Don't show summaries of the members in each class along with the

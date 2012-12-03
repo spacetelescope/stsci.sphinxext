@@ -99,6 +99,9 @@ html_domain_indices = ['py-modindex']
 
 # Additional stuff for the LaTeX preamble.
 latex_preamble = r'''
+\usepackage{enumitem}
+\setlistdepth{15}
+
 \usepackage{amsmath}
 \DeclareUnicodeCharacter{00A0}{\nobreakspace}
 

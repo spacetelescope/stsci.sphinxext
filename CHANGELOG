@@ -1,0 +1,28 @@
+Changelog
+=========
+
+1.2.2 (unreleased)
+------------------
+
+- No changes yet.
+
+
+1.2.1 (2013-05-01)
+------------------
+
+- Removed a superfluous np-modindex link that was being added to the navigation
+  in all HTML documentation.  It seems to come from numpydoc, and is specific
+  to generating a module index for Numpy modules.
+
+- Moved the sidebar in the Sphinx HTML template from the right side of the page
+  to the left.
+
+- Updated the intersphinx URL for matplotlib.
+
+- Use the enumitem LaTeX package to support additional levels of item nesting.
+
+
+1.1 (2011-08-31)
+----------------
+
+- Initial public release.

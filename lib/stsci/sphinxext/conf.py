@@ -17,7 +17,7 @@ to::
 
 Also, comment out the 'html_theme' line.
 """
-
+from __future__ import print_function
 import glob
 import os
 import sys
@@ -33,15 +33,15 @@ primary_domain = 'py'
 try:
     import numpydoc
 except ImportError:
-    print >> sys.stderr, ('numpydoc and Numpy are required to build this '
-                          'documentation')
+    print('numpydoc and Numpy are required to build this documentation',
+          file=sys.stderr)
     sys.exit(1)
 
 try:
     import matplotlib.sphinxext
 except ImportError:
-    print >> sys.stderr, ('matplotlib, and specifically matplotlib.sphinxext '
-                          'are required to build this documentation')
+    print('matplotlib, and specifically matplotlib.sphinxext '
+          'are required to build this documentation', file=sys.stderr)
     sys.exit(1)
 
 # A list of standard extensions

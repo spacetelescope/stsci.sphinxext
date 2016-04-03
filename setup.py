@@ -35,7 +35,7 @@ setup(
     package_dir = {
         '': 'lib'
     },
-    packages = find_packages(),
+    packages = find_packages('lib'),
     package_data = {
         '': ['README'],
         'licenses': '*',
